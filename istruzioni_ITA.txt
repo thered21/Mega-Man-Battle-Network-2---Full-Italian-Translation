@@ -1,0 +1,65 @@
+# ============================================================
+# GUIDA ALLA TRADUZIONE GBA (SERIE MMBN) CON TEXTPET
+# ============================================================
+
+Questa guida spiega come estrarre, modificare e reinserire i 
+testi nelle ROM di Mega Man Battle Network.
+
+------------------------------------------------------------
+1. PREPARAZIONE E SETUP
+------------------------------------------------------------
+* Posiziona la ROM originale nella cartella principale di TextPet.
+* Assicurati che siano presenti i file:
+  - applica.tps  (per l'estrazione)
+  - applica2.tps (per il reinserimento)
+
+* NOTA SULLE CARTELLE:
+  - [OG]   -> Qui vanno i file originali (per backup).
+  - [test] -> Qui finiscono i file estratti e quelli da modificare.
+  
+  CONSIGLIO: Appena estratti i file, copiali da [test] a [OG]. 
+  In questo modo avrai sempre un riferimento sicuro se l'AI sbaglia.
+
+------------------------------------------------------------
+2. CONFIGURAZIONE (SE CAMBI GIOCO)
+------------------------------------------------------------
+Se vuoi tradurre un capitolo diverso (es. BN3, BN4 invece del 2):
+1. Apri la cartella 'index' e trova il codice del gioco.
+2. Apri 'applica.tps' e 'applica2.tps' con il Blocco Note.
+3. Sostituisci "mmbn2-eu.tpi" con l'indice desiderato.
+
+------------------------------------------------------------
+3. FASE 1: ESTRAZIONE DEI TESTI
+------------------------------------------------------------
+1. Apri il terminale (CMD) nella cartella di TextPet.
+2. Digita o incolla il seguente comando:
+
+   textpet.exe run-script applica.tps
+
+3. Troverai i file .tpl estratti nella cartella [test].
+
+------------------------------------------------------------
+4. FASE 2: TRADUZIONE (AI / MANUALE)
+------------------------------------------------------------
+* Modifica i file .tpl nella cartella [test].
+* Se usi ChatGPT: L'AI può commettere errori di sintassi.
+Trovi il comando nella cartella. Copia e incolla. A seguire
+Invia semplicemente i vari archivi.
+* Se il gioco crasha, confronta il file tradotto con quello 
+  originale in [OG] e chiedi all'AI di correggere il blocco.
+
+------------------------------------------------------------
+5. FASE 3: REINSERIMENTO NELLA ROM
+------------------------------------------------------------
+1. Torna nel CMD (o riaprilo nella cartella).
+2. Digita o incolla il seguente comando:
+
+   textpet.exe run-script applica2.tps
+
+3. Operazione completata! La ROM è patchata e pronta.
+
+------------------------------------------------------------
+RIASSUNTO VELOCE:
+1. ROM in cartella -> 2. Modifica .tps -> 3. Run script 1 
+4. Traduci i .tpl -> 5. Run script 2 -> FINE!
+------------------------------------------------------------
